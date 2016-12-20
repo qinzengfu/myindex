@@ -5,7 +5,7 @@
   var moveX,moveY,startX,startY;
   $(document).on("touchstart","#title",function(event){
     if($(event.target).attr('id') == 'title'){
-      console.log(event)
+      console.log(event.target.parentNode.offsetLeft)
       var touchPros = event.touches[0];
       
       startX = touchPros.pageX - event.target.parentNode.offsetLeft;

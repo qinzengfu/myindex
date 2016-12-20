@@ -28,14 +28,15 @@
       ;(function($){
         $('#touchs').find('li').remove();
         $('#touchs').bind("touchstart",function(event){
-          
+          console.log(event.target.offsetLeft,event.target.offsetTop);
           var touchpros =event.touches[0];
           
-          $('#touchs').append('<li>touchstart...</li>');
+          // $('#touchs').append('<li>touchstart...</li>');
         });
         $('#touchs').bind("touchmove",function(event){
           console.log($(this).position().left,$(this).position().top);
-          $('#touchs').append('<li>touchmove...</li>');
+          // $('#touchs').append('<li>touchmove...</li>');
+          var 
           
         });
         $("body").bind("touchmove",function(event){
@@ -50,10 +51,10 @@
             //$('#touchs').css({top:_top,left:_left})
         })
         $('#touchs').bind("touchend",function(){
-          $('#touchs').append('<li>touchend...</li>');
+          // $('#touchs').append('<li>touchend...</li>');
         });
         $('#touchs').bind("touchcancel",function(){
-          $('#touchs').append('<li>touchcancel...</li>');
+          // $('#touchs').append('<li>touchcancel...</li>');
         });
         $('.clear').bind("click",function(){
           $('#touchs').find('li').remove();
