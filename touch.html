@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+      #touchs{
+      margin: 10px;width: 100px;height: auto;min-height: 100px;
+      border:1px solid #c2ddb6;border-radius: 2px;background: #c2ddb6;position: relative;
+      }
+      #touchs li {list-style: none;}
+      .clear{
+      margin-left: 10px;display:inline-block;height: 24px;width: 40px;color:#fff;
+      font-size: 14px;line-height: 24px;background: #c2ddb6;text-align: center;
+      }
+  </style>
+</head>
+<body>
+    <div id="touch_test">
+      <span class="clear">clear</span>
+      <ul id="touchs">
+      </ul>
+    </div>
+</body>
+      <script type="text/javascript" src="js/zepto.js"></script>
+      <script type="text/javascript" src="js/touch.js"></script>
+      <script type="text/javascript">
+      ;(function($){
+        $('#touchs').find('li').remove();
+        $('#touchs').bind("touchstart",function(event){
+          
+          var touchpros =event.touches[0];
+          
+          $('#touchs').append('<li>touchstart...</li>');
+        });
+        $('#touchs').bind("touchmove",function(event){
+          console.log($(this).position().left,$(this).position().top);
+          $('#touchs').append('<li>touchmove...</li>');
+          
+        });
+        $("body").bind("touchmove",function(event){
+
+
+          //console.log(event)
+            var touchpros =event.touches[0];
+            
+            var _top=touchpros.pageY-touchpros.screenY;
+            var _left=touchpros.pageX-touchpros.screenX;
+           // console.log(_top,_left)
+            //$('#touchs').css({top:_top,left:_left})
+        })
+        $('#touchs').bind("touchend",function(){
+          $('#touchs').append('<li>touchend...</li>');
+        });
+        $('#touchs').bind("touchcancel",function(){
+          $('#touchs').append('<li>touchcancel...</li>');
+        });
+        $('.clear').bind("click",function(){
+          $('#touchs').find('li').remove();
+        });
+      })(Zepto);   
+      </script>
+
+
+      ev.targetTouches[0].pageX-ev.targetTouches[0].pageX+$(this).position().left;
+</html>
+
+
+
+
