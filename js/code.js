@@ -6,8 +6,12 @@
 
   var video=document.getElementsByTagName('video')
   var len=$("video").length;
-  var v_width=parseFloat($("video").eq(0).css("width"));
-  $("#con").css("width",v_width*len)
+  var w_width=parseFloat($(".wrap").css("width"));
+  var c_width=w_width*len;
+  console.log(c_width)
+  $("video").css("width",w_width+"px");
+  $("#con").css("width",c_width+"px");
+  console.log("w_width:"+w_width,"length:"+len,"#con_width:"+ $("#con").css("width"));
   $(document).on("touchstart","#con",function(event){
     if($(event.target).hasClass('active')){
       //console.log(event.target.parentNode.offsetLeft);
@@ -28,7 +32,7 @@
       var touchPros = event.touches[0];
       moveX = touchPros.pageX - startX;
       moveY = touchPros.pageY - startY;
-      console.log(moveX)
+      //console.log(moveX)
 
 
       $('#con').css('left',moveX);
@@ -47,7 +51,7 @@
        
 
        video[index].pause();
-       _this.removeClass("active");
+       $(".active").removeClass("active");
        
        if(index==len-1){
           index=0;
@@ -56,11 +60,12 @@
        }
        $("video").eq(index).addClass("active");
        video[index].play();
-       $('#con').css('left',-index*v_width+"px");
+       $('#con').css('left',-index*w_width+"px");
+       console.log($('#con').css('left'));
     }else if(moveX>0){
       
        video[index].pause();
-       _this.removeClass("active");
+       $(".active").removeClass("active");
        if(index==0){
         index=len-1;
        }else{
@@ -68,7 +73,7 @@
        }
        $("video").eq(index).addClass("active");
        video[index].play();
-       $('#con').css('left',-index*v_width+"px");
+       $('#con').css('left',-index*w_width+"px");
     }
   });
 })(Zepto); {}

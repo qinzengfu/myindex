@@ -5,13 +5,13 @@ body,h6,h5,h4,h3,h2,h1
 }
 
 /*#myVideo{height:100%;width:100%;}*/
-video{height:100%;width:100%/6;float:left;float:left;}
+video{height:100%;float:left;}
 .active{z-index: 999}
 .wrap{width:100%;height:300px;position: relative;top: 100px;background: red;overflow: hidden;}
 
 
 #con{
-  border: 1px solid #009933;margin: 0px;width: 200%;height: 300px;position: absolute;left: 0;top:0px;
+  border: 1px solid #009933;margin: 0px;height: 300px;position: absolute;left: 0;top:0px;
 }
 #main{
   margin: 10px;text-align: center;
