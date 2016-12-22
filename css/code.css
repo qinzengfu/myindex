@@ -3,15 +3,21 @@ body,h6,h5,h4,h3,h2,h1
   margin: 0;padding: 0;
   font-family: "Arial, Helvetica, sans-serif";line-height: 23px;font-size: 13px;
 }
+
+/*#myVideo{height:100%;width:100%;}*/
+video{height:100%;width:100%/6;float:left;float:left;}
+.active{z-index: 999}
+.wrap{width:100%;height:300px;position: relative;top: 100px;background: red;overflow: hidden;}
+
+
 #con{
-  border: 1px solid #009933;margin: 0px;width: 180px;height: 200px;position: absolute;left: 30px;top:40px;
-}
-#title,#main{
-  margin: 10px;text-align: center;
-}
-#title{
-  background:#009933;height: 30px;line-height: 30px;font-size: 16px;color: #fff;
+  border: 1px solid #009933;margin: 0px;width: 200%;height: 300px;position: absolute;left: 0;top:0px;
 }
 #main{
-  height: 140px;font-size: 14px;line-height: 20px;color:#0058d2;
+  margin: 10px;text-align: center;
+}
+
+#title{height:200px;width:100%;background: red;}
+#main{
+  width:100%;height: 100px;font-size: 40px;line-height: 100px;color:#0058d2;
 }
