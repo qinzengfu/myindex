@@ -3,13 +3,15 @@
 ;(function($){
   /*touchstart the title and drag the con moving*/
   var moveX,moveY,startX,startY,i=0;
-
+  console.log($("ul>div").css("width"))
+  console.log($("ul>div").css("height"))
   var video=document.getElementsByTagName('video')
   var len=$("video").length;
   var w_width=parseFloat($(".wrap").css("width"));
   var c_width=w_width*len;
-  console.log(c_width)
-  $("video").css("width",w_width+"px");
+
+
+  $("ul div").css("width",w_width+"px");
   $("#con").css("width",c_width+"px");
   console.log("w_width:"+w_width,"length:"+len,"#con_width:"+ $("#con").css("width"));
   $(document).on("touchstart","#con",function(event){
@@ -25,8 +27,6 @@
 
     if($(event.target).hasClass('active')){
 
-      console.log($("#con").css("width"));
-      console.log($("#con").css("height"));
 
 
       var touchPros = event.touches[0];
@@ -38,15 +38,12 @@
       $('#con').css('left',moveX);
       }
 
-  }).on("touchend","video",function(event){
-
+  }).on("touchend","div",function(event){
 
     console.log($(this))
     var _this=$(this);
     
     var index=_this.index()
-    console.log(video[0])
-    console.log(video[1])
     if(moveX<0){
        
 
@@ -61,7 +58,6 @@
        $("video").eq(index).addClass("active");
        video[index].play();
        $('#con').css('left',-index*w_width+"px");
-       console.log($('#con').css('left'));
     }else if(moveX>0){
       
        video[index].pause();
@@ -74,6 +70,8 @@
        $("video").eq(index).addClass("active");
        video[index].play();
        $('#con').css('left',-index*w_width+"px");
+    }else{
+
     }
   });
 })(Zepto); {}
