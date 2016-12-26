@@ -1,5 +1,5 @@
 
-html,body,h6,h5,h4,h3,h2,h1,ul
+html,body,h6,h5,h4,h3,h2,h1,ul,div
 {
   width:100%;
   margin: 0;padding: 0;
@@ -8,16 +8,20 @@ html,body,h6,h5,h4,h3,h2,h1,ul
 }
 
 
-ul>div{float:left;height:100%;}
+ul>div{float:left;height:100%;text-align: center;overflow: hidden;align-items: center}
 
 
-video{padding:0;}
+#con video{padding:0;}
 .active{z-index: 999}
-.wrap{width:100%;height:100%;position: relative;top: 0px;background: red;}
+.wrap{width:100%;height:100%;position: relative;top: 0px;}
 
 
 #con{
-  margin: 0px;height:100%;position: absolute;left: 0;top:0px;
+  margin: 0px;height:100%;position: absolute;left:  0;top:0px;
 }
 
-#title{height:200px;width:100%;background: red;}
+#title{height:200px;width:100%;}
+
+
+
+#video{display: none;}

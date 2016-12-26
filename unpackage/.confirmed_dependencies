@@ -9,7 +9,9 @@
 			"movies/3.mp4",
 			"js/zepto.js",
 			"css/code.css",
-			"js/code.js"
+			"js/code.js",
+			"movies/5.mp4",
+			"js/config.js"
 		]
 	}
 }

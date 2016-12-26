@@ -212,7 +212,9 @@
 					"movies/3.mp4",
 					"js/zepto.js",
 					"css/code.css",
-					"js/code.js"
+					"js/code.js",
+					"movies/5.mp4",
+					"js/config.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -228,7 +230,6 @@
 				"movies/f.mkv",
 				"css/index.css",
 				"movies/b.mkv",
-				"movies/5.mp4",
 				"js/iscroll.js",
 				"movies/e.mkv",
 				"touch.html",
